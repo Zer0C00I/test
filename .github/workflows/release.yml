@@ -11,14 +11,27 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      # Check out the repository, including submodules
       - uses: actions/checkout@v2
         with:
           submodules: true
+
+      # Install necessary dependencies (Boost)
       - run: sudo apt-get update && sudo apt-get install libboost-test-dev -y
+
+      # Configure the build with CMake, passing the run number as the patch version
       - run: cmake . -DPATCH_VERSION=${{ github.run_number }}
+
+      # Build the project
       - run: cmake --build .
+
+      # Run tests
       - run: cmake --build . --target test
+
+      # Build the package (e.g., .deb file)
       - run: cmake --build . --target package
+
+      # Create a GitHub Release
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
@@ -29,6 +42,8 @@ jobs:
           release_name: Release ${{ github.run_number }}
           draft: false
           prerelease: false
+
+      # Upload the release asset (e.g., .deb package)
       - name: Upload Release Asset
         id: upload-release-asset
         uses: actions/upload-release-asset@v1
@@ -39,3 +54,13 @@ jobs:
           asset_path: ./helloworld-0.0.${{ github.run_number }}-Linux.deb
           asset_name: helloworld-0.0.${{ github.run_number }}-Linux.deb
           asset_content_type: application/vnd.debian.binary-package
+
+      # If you were to set an output, use the GITHUB_OUTPUT file
+      # Example of setting an output (though it's not in your original file)
+      - name: Set output example
+        run: echo "release_url=https://github.com/${{ github.repository }}/releases/tag/${{ github.run_number }}" >> $GITHUB_OUTPUT
+
+      # If you need to save state, use the GITHUB_STATE file
+      - name: Save state example
+        run: echo "release_state=completed" >> $GITHUB_STATE
+
