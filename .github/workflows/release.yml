@@ -31,10 +31,10 @@ jobs:
       # Build the package (e.g., .deb file)
       - run: cmake --build . --target package
 
-      # Create a GitHub Release (using the latest version of the create-release action)
+      # Create a GitHub Release using the correct action
       - name: Create Release
         id: create_release
-        uses: octokit/create-release@v1 # Updated to avoid deprecated set-output
+        uses: actions/create-release@v1 # Ensure using the official action
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
@@ -46,7 +46,7 @@ jobs:
       # Upload the release asset (e.g., .deb package)
       - name: Upload Release Asset
         id: upload-release-asset
-        uses: octokit/upload-release-asset@v1 # Updated to avoid deprecated set-output
+        uses: actions/upload-release-asset@v1 # Ensure using the official action
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
@@ -55,8 +55,8 @@ jobs:
           asset_name: helloworld-0.0.${{ github.run_number }}-Linux.deb
           asset_content_type: application/vnd.debian.binary-package
 
-      # Set output using new environment file handling (if needed in your custom actions)
-      # Example of setting an output
+      # Set output using the new environment file handling (if needed in your custom actions)
+      # Example of setting an output (optional)
       - name: Set output example
         run: echo "release_url=https://github.com/${{ github.repository }}/releases/tag/${{ github.run_number }}" >> $GITHUB_OUTPUT
 
