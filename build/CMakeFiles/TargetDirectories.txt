@@ -1,0 +1,12 @@
+/media/anon/7A783A9D51AB320A/VideoCourse/С&C++/[OTUS] C++ Developer. Professional (2023)/01. Система сборки. build, test and deploy_/source/build/CMakeFiles/helloworld_cli.dir
+/media/anon/7A783A9D51AB320A/VideoCourse/С&C++/[OTUS] C++ Developer. Professional (2023)/01. Система сборки. build, test and deploy_/source/build/CMakeFiles/helloworld.dir
+/media/anon/7A783A9D51AB320A/VideoCourse/С&C++/[OTUS] C++ Developer. Professional (2023)/01. Система сборки. build, test and deploy_/source/build/CMakeFiles/test_version.dir
+/media/anon/7A783A9D51AB320A/VideoCourse/С&C++/[OTUS] C++ Developer. Professional (2023)/01. Система сборки. build, test and deploy_/source/build/CMakeFiles/package.dir
+/media/anon/7A783A9D51AB320A/VideoCourse/С&C++/[OTUS] C++ Developer. Professional (2023)/01. Система сборки. build, test and deploy_/source/build/CMakeFiles/package_source.dir
+/media/anon/7A783A9D51AB320A/VideoCourse/С&C++/[OTUS] C++ Developer. Professional (2023)/01. Система сборки. build, test and deploy_/source/build/CMakeFiles/test.dir
+/media/anon/7A783A9D51AB320A/VideoCourse/С&C++/[OTUS] C++ Developer. Professional (2023)/01. Система сборки. build, test and deploy_/source/build/CMakeFiles/edit_cache.dir
+/media/anon/7A783A9D51AB320A/VideoCourse/С&C++/[OTUS] C++ Developer. Professional (2023)/01. Система сборки. build, test and deploy_/source/build/CMakeFiles/rebuild_cache.dir
+/media/anon/7A783A9D51AB320A/VideoCourse/С&C++/[OTUS] C++ Developer. Professional (2023)/01. Система сборки. build, test and deploy_/source/build/CMakeFiles/list_install_components.dir
+/media/anon/7A783A9D51AB320A/VideoCourse/С&C++/[OTUS] C++ Developer. Professional (2023)/01. Система сборки. build, test and deploy_/source/build/CMakeFiles/install.dir
+/media/anon/7A783A9D51AB320A/VideoCourse/С&C++/[OTUS] C++ Developer. Professional (2023)/01. Система сборки. build, test and deploy_/source/build/CMakeFiles/install/local.dir
+/media/anon/7A783A9D51AB320A/VideoCourse/С&C++/[OTUS] C++ Developer. Professional (2023)/01. Система сборки. build, test and deploy_/source/build/CMakeFiles/install/strip.dir
